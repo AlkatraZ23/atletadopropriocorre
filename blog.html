@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Blog | Atleta do Próprio Corre - Artigos Testados e Aprovados</title>
+    <meta name="description" content="Artigos sobre esportes, suplementação, saúde e bem-estar. Produtos testados, experiências reais e dicas práticas.">
+    <meta name="keywords" content="blog fitness, suplementos, treino, saúde, bem-estar, atleta, produtos testados, sportlife">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog - Atleta do Próprio Corre">
+    <meta property="og:description" content="Artigos sobre esportes, suplementação e bem-estar com experiências reais.">
+    <meta property="og:image" content="https://seusite.vercel.app/blog-og.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU_ID_AQUI"
+     crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Fixo */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 9999;
+            padding: 15px 0;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+        }
+
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Hero Blog */
+        .blog-hero {
+            margin-top: 100px;
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 3px solid #fff;
+        }
+
+        .blog-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .blog-hero p {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filtros */
+        .filtros {
+            padding: 40px 20px;
+            text-align: center;
+            background: #0a0a0a;
+            border-bottom: 2px solid #333;
+        }
+
+        .filtros h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filtro-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filtro-btn {
+            background: #1a1a1a;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 12px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filtro-btn:hover,
+        .filtro-btn.active {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Container Principal */
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .categoria-section {
+            margin-bottom: 80px;
+        }
+
+        .categoria-titulo {
+            font-size: 36px;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #fff;
+            letter-spacing: 2px;
+        }
+
+        /* Grid de Artigos */
+        .artigos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        /* Card do Artigo */
+        .artigo-card {
+            background: #0a0a0a;
+            border: 3px solid #fff;
+            overflow: hidden;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artigo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .artigo-imagem {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #fff;
+        }
+
+        .artigo-conteudo {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artigo-categoria {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 6px 15px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .artigo-categoria.esporte {
+            background: #0f0;
+        }
+
+        .artigo-categoria.saude {
+            background: #0ff;
+        }
+
+        .artigo-categoria.extremo {
+            background: #f00;
+        }
+
+        .artigo-categoria.opiniao {
+            background: #ff0;
+            color: #000;
+        }
+
+        .artigo-categoria.sportlife {
+            background: linear-gradient(135deg, #ff6b00 0%, #ff0 100%);
+            color: #000;
+        }
+
+        .artigo-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        .artigo-descricao {
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .artigo-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .artigo-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .artigo-btn::after {
+            content: '→';
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        /* AdSense Container */
+        .adsense-container {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .adsense-container.top {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .adsense-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Responsivo Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 0;
+            }
+
+            .logo {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+            .blog-hero {
+                margin-top: 90px;
+                padding: 40px 15px;
+            }
+
+            .blog-hero h1 {
+                font-size: 32px;
+            }
+
+            .blog-hero p {
+                font-size: 16px;
+            }
+
+            .filtros {
+                padding: 30px 15px;
+            }
+
+            .filtro-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+
+            .blog-container {
+                padding: 40px 15px;
+            }
+
+            .categoria-titulo {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .artigos-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .artigo-conteudo {
+                padding: 20px;
+            }
+
+            .artigo-card h3 {
+                font-size: 22px;
+            }
+
+            .artigo-descricao {
+                font-size: 15px;
+            }
+
+            .adsense-container {
+                margin: 40px auto;
+            }
+        }
+
+        /* Safari iOS */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .blog-hero {
+                margin-top: 95px;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .blog-hero {
+                margin-top: 95px;
+            }
+
+            .artigos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="index.html#descubra">Descubra</a>
+                <a href="index.html#produtos">Produtos</a>
+                <a href="blog.html" class="active">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Blog -->
+    <section class="blog-hero">
+        <h1>BLOG</h1>
+        <p>Artigos sobre esportes, suplementação, saúde e bem-estar. Produtos testados, experiências reais e dicas práticas.</p>
+    </section>
+
+
+    <!-- AdSense Topo (após hero) -->
+    <div class="adsense-container top">
+        <p class="adsense-label">Publicidade</p>
+        <!-- AdSense Display Responsivo -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-SEU_ID_AQUI"
+             data-ad-slot="SEU_SLOT_1"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+
+    <!-- Filtros -->
+    <section class="filtros">
+        <h2>Filtrar por Categoria</h2>
+        <div class="filtro-buttons">
+            <button class="filtro-btn active" onclick="filtrarCategoria('todas')">Todas</button>
+            <button class="filtro-btn" onclick="filtrarCategoria('esporte')">Esporte</button>
+            <button class="filtro-btn" onclick="filtrarCategoria('sportlife')">SportLife</button>
+            <button class="filtro-btn" onclick="filtrarCategoria('opiniao')">Artigo de Opinião</button>
+            <button class="filtro-btn" onclick="filtrarCategoria('saude')">Saúde e Bem-Estar</button>
+        </div>
+    </section>
+
+
+    <!-- Container Principal -->
+    <main class="blog-container">
+
+        <!-- CATEGORIA: ESPORTE -->
+        <section class="categoria-section" id="esporte" data-categoria="esporte">
+            <h2 class="categoria-titulo">🏋️ ESPORTE</h2>
+
+            <div class="artigos-grid">
+
+                <!-- Artigo 1: Barra Ovomaltine -->
+                <article class="artigo-card">
+                    <img src="barra-ovomaltine.jpg" alt="Barra Ovomaltine" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria esporte">ESPORTE</span>
+                        <h3>Barra de Proteína Ovomaltine: O Chocolate dos Atletas</h3>
+                        <p class="artigo-descricao">Review completo da barra mais saborosa do mercado. 20g de proteína com sabor autêntico de Ovomaltine. Testada e aprovada pela Integral Médica.</p>
+                        <a href="artigo-barra-ovomaltine.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+                <!-- Artigo 2: Insane Clown -->
+                <article class="artigo-card">
+                    <img src="insane-clown.jpg" alt="Insane Clown" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria extremo">EXTREMO</span>
+                        <h3>Insane Clown: Potência Que Assusta e Riscos Reais</h3>
+                        <p class="artigo-descricao">A verdade sobre o pré-treino mais potente e polêmico do mercado. Eficiência brutal, energia explosiva e os riscos que você precisa saber antes de usar.</p>
+                        <a href="artigo-insane-clown.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- AdSense Meio (entre Esporte e SportLife) -->
+        <div class="adsense-container">
+            <p class="adsense-label">Publicidade</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-SEU_ID_AQUI"
+                 data-ad-slot="SEU_SLOT_2"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+
+        <!-- CATEGORIA: SPORTLIFE -->
+        <section class="categoria-section" id="sportlife" data-categoria="sportlife">
+            <h2 class="categoria-titulo">🏃 SPORTLIFE</h2>
+
+            <div class="artigos-grid">
+
+                <!-- Artigo 1: SPORTLIFE Conceito -->
+                <article class="artigo-card">
+                    <img src="sportlife-concept.jpg" alt="SPORTLIFE Estilo de Vida" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria sportlife">SPORTLIFE</span>
+                        <h3>SPORTLIFE: Mais Que Moda, Um Estilo de Vida Sustentável</h3>
+                        <p class="artigo-descricao">O novo conceito que une moda, sustentabilidade e bem-estar. Descubra como o SPORTLIFE pode revolucionar a indústria da moda e seu estilo de vida.</p>
+                        <a href="artigo-sportlife.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- CATEGORIA: ARTIGO DE OPINIÃO -->
+        <section class="categoria-section" id="opiniao" data-categoria="opiniao">
+            <h2 class="categoria-titulo">💭 ARTIGO DE OPINIÃO</h2>
+
+            <div class="artigos-grid">
+
+                <!-- Opinião 1: Happy Hair -->
+                <article class="artigo-card">
+                    <img src="produto1.jpg" alt="Happy Hair Opinião" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria opiniao">ARTIGO DE OPINIÃO</span>
+                        <h3>Happy Hair: Vale a Pena? Minha Opinião Honesta</h3>
+                        <p class="artigo-descricao">Review completo do Happy Hair + Colágeno. Funcionou MESMO para mim? Resultados reais em cabelo e unhas. Opinião sem filtro.</p>
+                        <a href="produto-happy-hair.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+                <!-- Opinião 2: Óleo Alecrim -->
+                <article class="artigo-card">
+                    <img src="produto-alecrim.jpg" alt="Óleo Alecrim Opinião" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria opiniao">ARTIGO DE OPINIÃO</span>
+                        <h3>Óleo de Alecrim WNF: Realmente Funciona Para Crescimento Capilar?</h3>
+                        <p class="artigo-descricao">Testei por 3 meses. Minha opinião sincera sobre eficácia, aplicação e resultados do óleo essencial de alecrim da WNF.</p>
+                        <a href="produto-oleo-alecrim.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+                <!-- Opinião 3: Óleo Lavanda -->
+                <article class="artigo-card">
+                    <img src="produto-lavanda.jpg" alt="Óleo Lavanda Opinião" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria opiniao">ARTIGO DE OPINIÃO</span>
+                        <h3>Óleo de Lavanda: Por Que É o Campeão de Vendas?</h3>
+                        <p class="artigo-descricao">Entenda por que o óleo de lavanda WNF é o mais vendido. Minha análise sobre usos, benefícios e custo-benefício real.</p>
+                        <a href="produto-oleo-lavanda.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- AdSense Meio 2 (entre Opinião e Saúde) -->
+        <div class="adsense-container">
+            <p class="adsense-label">Publicidade</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-SEU_ID_AQUI"
+                 data-ad-slot="SEU_SLOT_3"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+
+        <!-- CATEGORIA: SAÚDE E BEM-ESTAR -->
+        <section class="categoria-section" id="saude" data-categoria="saude">
+            <h2 class="categoria-titulo">🌿 SAÚDE E BEM-ESTAR</h2>
+
+            <div class="artigos-grid">
+
+                <!-- Artigo 1: Tratamento Capilar -->
+                <article class="artigo-card">
+                    <img src="blog1.jpg" alt="Tratamento Capilar" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria saude">SAÚDE E BEM-ESTAR</span>
+                        <h3>Como Tratar Queda Capilar com Apenas 3 Produtos</h3>
+                        <p class="artigo-descricao">Método completo com dosagens exatas para crescimento capilar. Testado e aprovado aos 20 anos. Óleo de alecrim, lavanda e Happy Hair em ação.</p>
+                        <a href="artigo-tratamento-capilar.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+                <!-- Artigo 2: Sabão Albany -->
+                <article class="artigo-card">
+                    <img src="sabao-albany.jpg" alt="Sabão Albany" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria saude">SAÚDE E BEM-ESTAR</span>
+                        <h3>Sabão Albany Antibacteriano: Solução Para Foliculite</h3>
+                        <p class="artigo-descricao">Como acabar com alergias de gilete, foliculite e ressecamento de pele. Kit com 4 sabonetes antibacterianos testado e aprovado. Resultado garantido.</p>
+                        <a href="artigo-sabao-albany.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+                <!-- Artigo 3: Blue Calm -->
+                <article class="artigo-card">
+                    <img src="blue-calm.jpg" alt="Blue Calm Melatonina" class="artigo-imagem">
+                    <div class="artigo-conteudo">
+                        <span class="artigo-categoria saude">SAÚDE E BEM-ESTAR</span>
+                        <h3>Blue Calm: Melatonina em Gotas Para Insônia e Atletas</h3>
+                        <p class="artigo-descricao">Mais eficiente que gomas tradicionais. Para insônia, problemas de ATM e recuperação pós-treino. Absorção rápida e resultados comprovados.</p>
+                        <a href="artigo-blue-calm.html" class="artigo-btn">Ler Mais</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- AdSense Rodapé (antes do footer) -->
+    <div class="adsense-container">
+        <p class="adsense-label">Publicidade</p>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-SEU_ID_AQUI"
+             data-ad-slot="SEU_SLOT_4"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <!-- Script de Filtros -->
+    <script>
+        function filtrarCategoria(categoria) {
+            // Atualiza botões ativos
+            const botoes = document.querySelectorAll('.filtro-btn');
+            botoes.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filtra seções
+            const secoes = document.querySelectorAll('.categoria-section');
+
+            if (categoria === 'todas') {
+                secoes.forEach(secao => {
+                    secao.style.display = 'block';
+                });
+            } else {
+                secoes.forEach(secao => {
+                    if (secao.getAttribute('data-categoria') === categoria) {
+                        secao.style.display = 'block';
+                    } else {
+                        secao.style.display = 'none';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

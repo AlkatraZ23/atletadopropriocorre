@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Óleo Essencial de Alecrim WNF: Crescimento Capilar e Foco Mental | Atleta do Próprio Corre</title>
+    <meta name="description" content="Descubra como o Óleo Essencial de Alecrim WNF promove crescimento capilar, evita caspas e melhora foco e criatividade. Aromaterapia para atletas e estudantes.">
+    <meta name="keywords" content="óleo alecrim, WNF, crescimento capilar, aromaterapia, foco, concentração, caspa, óleo essencial, couro cabeludo">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Óleo Essencial de Alecrim: Crescimento Capilar e Foco Mental">
+    <meta property="og:description" content="Promove crescimento capilar, evita fungos e melhora foco. Aromaterapia testada e aprovada.">
+    <meta property="og:image" content="https://seusite.vercel.app/produto-alecrim.jpg">
+    <meta property="og:type" content="product">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Óleo Essencial de Alecrim WNF">
+    <meta name="twitter:description" content="Crescimento capilar e foco mental com aromaterapia.">
+    <meta name="twitter:image" content="https://seusite.vercel.app/produto-alecrim.jpg">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Óleo Essencial de Alecrim Orgânico WNF",
+      "image": "https://seusite.vercel.app/produto-alecrim.jpg",
+      "description": "Óleo essencial de alecrim para crescimento capilar, foco e concentração",
+      "brand": {
+        "@type": "Brand",
+        "name": "WNF"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "22",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid #fff;
+        }
+        
+        .instagram-btn {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.4);
+        }
+        
+        .instagram-btn:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        .instagram-icon {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+        
+        /* Main */
+        main {
+            margin-top: 140px;
+        }
+        
+        /* Hero Produto */
+        .produto-hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .produto-imagem-container {
+            position: sticky;
+            top: 180px;
+        }
+        
+        .produto-imagem {
+            width: 100%;
+            border: 3px solid #fff;
+            padding: 30px;
+            background: #fff;
+        }
+        
+        .produto-imagem img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Conteúdo COM IMAGEM DE FUNDO */
+        .produto-conteudo {
+            background-image: url('bg-relato-alecrim.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 50px;
+            min-height: 1000px;
+            position: relative;
+        }
+        
+        .produto-tag {
+            background: #fff;
+            color: #000;
+            padding: 8px 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .produto-conteudo h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Preço */
+        .preco-info {
+            margin: 30px 0;
+        }
+        
+        .preco-atual {
+            font-size: 56px;
+            font-weight: bold;
+            color: #fff;
+            display: inline-block;
+            line-height: 1;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        
+        .preco-antigo {
+            font-size: 28px;
+            text-decoration: line-through;
+            color: #888;
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+        
+        .economia {
+            display: block;
+            color: #0f0;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .frete {
+            color: #0f0;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+            display: block;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Texto do Relato */
+        .relato-texto {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #f0f0f0;
+            margin: 40px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+        
+        .relato-texto p {
+            margin-bottom: 25px;
+        }
+        
+        .relato-texto strong {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        /* Link Interno */
+        .link-interno {
+            color: #0f0;
+            text-decoration: underline;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .link-interno:hover {
+            color: #0ff;
+        }
+        
+        .destaque-relato {
+            border-left: 4px solid #fff;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 20px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 20px 20px 25px;
+        }
+        
+        /* CTA Integrado */
+        .cta-integrado {
+            margin: 50px 0;
+            text-align: left;
+        }
+        
+        .cta-texto {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        /* Botão Principal - ADQUIRIR CORRE */
+        .cta-principal {
+            display: inline-block;
+            background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+            color: #000;
+            padding: 25px 60px;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 3px solid #fff;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+        
+        .cta-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(135deg, #e0e0e0 0%, #fff 100%);
+        }
+        
+        .cta-principal::after {
+            content: '→';
+            margin-left: 15px;
+            font-size: 30px;
+        }
+        
+        /* Botão Secundário - BENEFÍCIOS ABAIXO */
+        .cta-scroll {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 20px 60px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 3px solid #fff;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .cta-scroll:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        .cta-scroll::after {
+            content: '↓';
+            margin-left: 15px;
+            font-size: 24px;
+        }
+        
+        .garantia {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        }
+        
+        /* AdSense */
+        .ad-container {
+            background: #111;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #333;
+            margin: 60px auto;
+            max-width: 728px;
+        }
+        
+        /* Benefícios */
+        .beneficios {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            border-top: 2px solid #333;
+        }
+        
+        .beneficios h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .beneficio-card {
+            background: #1a1a1a;
+            border: 2px solid #fff;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .beneficio-card:hover {
+            background: #0a0a0a;
+            transform: translateY(-5px);
+        }
+        
+        .beneficio-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .beneficio-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .beneficio-card p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+        
+        /* Combinação */
+        .combinacao {
+            background: #0a0a0a;
+            border-top: 2px solid #fff;
+            padding: 80px 20px;
+        }
+        
+        .combinacao-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .combinacao h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .combinacao-intro {
+            text-align: center;
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 50px;
+        }
+        
+        .produtos-combo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .combo-card {
+            background: #1a1a1a;
+            border: 2px solid #666;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .combo-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .combo-card p {
+            color: #aaa;
+            font-size: 15px;
+        }
+        
+        /* CTA Final */
+        .cta-final {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 3px solid #fff;
+            text-align: center;
+        }
+        
+        .cta-final h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .cta-final p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 968px) {
+            .produto-hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .produto-imagem-container {
+                position: static;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .produto-conteudo {
+                background-position: center;
+                padding: 40px 30px;
+                min-height: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+            
+            .instagram-btn {
+                position: static;
+                transform: none;
+                margin: 15px auto 0;
+                width: fit-content;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .produto-hero {
+                padding: 40px 20px;
+            }
+            
+            .produto-conteudo {
+                padding: 30px 20px;
+            }
+            
+            .produto-conteudo h1 {
+                font-size: 32px;
+            }
+            
+            .preco-atual {
+                font-size: 42px;
+            }
+            
+            .preco-antigo {
+                font-size: 22px;
+                display: block;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .relato-texto {
+                font-size: 17px;
+            }
+            
+            .cta-buttons {
+                gap: 15px;
+            }
+            
+            .cta-principal,
+            .cta-scroll {
+                padding: 20px 30px;
+                font-size: 18px;
+                display: block;
+                text-align: center;
+            }
+            
+            .beneficios h2,
+            .combinacao h2 {
+                font-size: 28px;
+            }
+            
+            .cta-final {
+                padding: 40px 20px;
+                margin: 60px 20px;
+            }
+            
+            .cta-final h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#produtos">Produtos</a>
+                <a href="index.html#descubra">Descubra</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            
+            <a href="https://instagram.com/atletadopropriocorre" target="_blank" class="instagram-btn">
+                <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Siga Nossa Página
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Produto -->
+        <section class="produto-hero">
+            <!-- Imagem do Produto -->
+            <div class="produto-imagem-container">
+                <div class="produto-imagem">
+                    <img src="produto-alecrim.jpg" alt="Óleo Essencial de Alecrim WNF">
+                </div>
+            </div>
+            
+            <!-- Conteúdo COM IMAGEM DE FUNDO -->
+            <div class="produto-conteudo">
+                <span class="produto-tag">🌿 AROMATERAPIA TESTADA</span>
+                <h1>Óleo Essencial de Alecrim Orgânico WNF</h1>
+                
+                <!-- Preço -->
+                <div class="preco-info">
+                    <span class="preco-atual">R$ 22</span>
+                    <span class="preco-antigo">R$ 28</span>
+                    <span class="economia">✓ Economize R$ 6</span>
+                    <span class="frete">✓ Frete Grátis</span>
+                </div>
+                
+                <!-- Relato Pessoal -->
+                <div class="relato-texto">
+                    <p>O <strong>Óleo Essencial de Alecrim da WNF</strong> foi parte fundamental do meu tratamento capilar. Junto ao <a href="produto-happy-hair.html" class="link-interno">suplemento Happy Hair</a>, ele completou a combinação perfeita que me trouxe resultados impressionantes.</p>
+
+                    <p>Eu uso o <strong>óleo de alecrim junto ao óleo essencial de lavanda</strong>, ambos da WNF. Essa combinação promove a <strong>dilatação dos vasos sanguíneos do couro cabeludo</strong>, o que estimula diretamente o crescimento capilar.</p>
+
+                    <div class="destaque-relato">
+                        <p>"O alecrim não só ajuda no crescimento dos fios, mas também previne fungos e caspas. É uma solução completa para a saúde capilar."</p>
+                    </div>
+
+                    <p>Uma dica valiosa: <strong>adicione algumas gotas ao seu xampu</strong>. Eu faço isso regularmente e os resultados são visíveis. O couro cabeludo fica mais saudável e os fios mais fortes.</p>
+
+                    <p>Mas os benefícios do alecrim vão além do cabelo. Ele é um <strong>potente estimulante para atenção, foco e criatividade</strong>. Se você estuda, trabalha ou treina, a aromaterapia com alecrim pode elevar seu desempenho.</p>
+
+                    <p>Para você que <strong>pratica esporte ou faz academia</strong>, adicione o estilo de vida da aromaterapia à sua rotina e tenha resultados impressionantes. O alecrim melhora a concentração durante os treinos e ajuda na recuperação mental pós-exercício.</p>
+
+                    <p>Eu uso tanto para o tratamento capilar quanto para <strong>melhorar meu foco nos estudos e treinos</strong>. É versátil, natural e eficiente.</p>
+                </div>
+                
+                <!-- CTA Integrado COM DOIS BOTÕES -->
+                <div class="cta-integrado">
+                    <p class="cta-texto">Quer experimentar os mesmos benefícios que eu tive? Conheça o Óleo Essencial de Alecrim WNF:</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" class="cta-principal">
+                            ADQUIRIR CORRE
+                        </a>
+                        
+                        <a href="#beneficios" class="cta-scroll">
+                            BENEFÍCIOS ABAIXO
+                        </a>
+                    </div>
+                    
+                    <p class="garantia">🔒 Compra 100% Segura | Entrega Garantida</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense -->
+        <div class="ad-container">
+            <p style="color: #666;">[ ANÚNCIO GOOGLE ADSENSE - 728x90 ]</p>
+        </div>
+
+        <!-- Benefícios -->
+        <section class="beneficios" id="beneficios">
+            <h2>BENEFÍCIOS DO ÓLEO DE ALECRIM</h2>
+            
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🌱</div>
+                    <h3>Crescimento Capilar</h3>
+                    <p>Dilata os vasos sanguíneos do couro cabeludo, promovendo circulação e crescimento dos fios.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🛡️</div>
+                    <h3>Previne Fungos e Caspas</h3>
+                    <p>Propriedades antifúngicas naturais que mantém o couro cabeludo saudável e livre de caspa.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🧠</div>
+                    <h3>Foco e Concentração</h3>
+                    <p>Estimula a atividade cerebral, melhorando atenção, foco e desempenho mental.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💡</div>
+                    <h3>Criatividade</h3>
+                    <p>Aromaterapia que desperta criatividade e clareza mental para estudos e trabalho.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💪</div>
+                    <h3>Performance Esportiva</h3>
+                    <p>Melhora concentração durante treinos e auxilia na recuperação mental pós-exercício.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🧴</div>
+                    <h3>Uso em Xampus</h3>
+                    <p>Adicione ao seu xampu para potencializar os benefícios capilares diariamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combinação -->
+        <section class="combinacao">
+            <div class="combinacao-content">
+                <h2>COMBINAÇÃO PODEROSA</h2>
+                <p class="combinacao-intro">Para resultados ainda melhores, combine o Óleo de Alecrim com:</p>
+                
+                <div class="produtos-combo">
+                    <div class="combo-card">
+                        <h4>🌿 Óleo de Lavanda WNF</h4>
+                        <p>Potencializa o crescimento capilar e promove relaxamento. Combinação perfeita com alecrim.</p>
+                    </div>
+                    
+                    <div class="combo-card">
+                        <h4>💊 Happy Hair + Colágeno</h4>
+                        <p>Tratamento interno e externo para máximos resultados capilares. <a href="produto-happy-hair.html" style="color: #0f0;">Conheça aqui</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense -->
+        <div class="ad-container">
+            <p style="color: #666;">[ ANÚNCIO GOOGLE ADSENSE - 728x90 ]</p>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="cta-final">
+            <h2>PRONTO PARA TRANSFORMAR SUA ROTINA?</h2>
+            <p>Adicione o poder da aromaterapia ao seu dia a dia. Crescimento capilar, foco e criatividade em um só produto.</p>
+            <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" class="cta-principal">
+                ADQUIRIR CORRE AGORA
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

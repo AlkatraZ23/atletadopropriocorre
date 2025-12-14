@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Happy Hair + Colágeno: Minha Solução Para Queda de Cabelo | Atleta do Próprio Corre</title>
+    <meta name="description" content="Descubra como o Happy Hair + Colágeno com Ácido Hialurônico mudou meu tratamento capilar em pouquíssimo tempo. Resultados reais testados e aprovados.">
+    <meta name="keywords" content="happy hair, colágeno, ácido hialurônico, queda de cabelo, crescimento capilar, fortalecimento de unhas">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Happy Hair + Colágeno: Minha Solução Para Queda de Cabelo">
+    <meta property="og:description" content="Resultados reais em pouquíssimo tempo. Conheça a combinação que funcionou para mim.">
+    <meta property="og:image" content="https://seusite.vercel.app/produto1.jpg">
+    <meta property="og:type" content="product">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid #fff;
+        }
+        
+        .instagram-btn {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.4);
+        }
+        
+        .instagram-btn:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        .instagram-icon {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+        
+        /* Main */
+        main {
+            margin-top: 140px;
+        }
+        
+        /* Hero Produto - LAYOUT LADO A LADO */
+        .produto-hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .produto-imagem-container {
+            position: sticky;
+            top: 180px;
+        }
+        
+        .produto-imagem {
+            width: 100%;
+            border: 3px solid #fff;
+            padding: 30px;
+            background: #fff;
+        }
+        
+        .produto-imagem img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Conteúdo COM IMAGEM DE FUNDO - SEM GRADIENTE CSS */
+        .produto-conteudo {
+            background-image: url('bg-relato-happy-hair.jpg'); /* SUA IMAGEM COM GRADIENTE JÁ INCLUÍDO */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 50px;
+            min-height: 1000px;
+            position: relative;
+        }
+        
+        .produto-tag {
+            background: #fff;
+            color: #000;
+            padding: 8px 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .produto-conteudo h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Preço SEM BOX - Clean */
+        .preco-info {
+            margin: 30px 0;
+        }
+        
+        .preco-atual {
+            font-size: 56px;
+            font-weight: bold;
+            color: #fff;
+            display: inline-block;
+            line-height: 1;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        
+        .preco-antigo {
+            font-size: 28px;
+            text-decoration: line-through;
+            color: #888;
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+        
+        .economia {
+            display: block;
+            color: #0f0;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .frete {
+            color: #0f0;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+            display: block;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Texto do Relato */
+        .relato-texto {
+            font-size: 19px;
+            line-height: 1.9;
+            color: #f0f0f0;
+            margin: 40px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+        
+        .relato-texto p {
+            margin-bottom: 25px;
+        }
+        
+        .relato-texto strong {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .destaque-relato {
+            border-left: 4px solid #fff;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 20px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 20px 20px 25px;
+        }
+        
+        /* CTA Integrado ao Texto */
+        .cta-integrado {
+            margin: 50px 0;
+            text-align: left;
+        }
+        
+        .cta-texto {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        }
+        
+        .cta-principal {
+            display: inline-block;
+            background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+            color: #000;
+            padding: 25px 60px;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 3px solid #fff;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(135deg, #e0e0e0 0%, #fff 100%);
+        }
+        
+        .cta-principal::after {
+            content: '→';
+            margin-left: 15px;
+            font-size: 30px;
+        }
+        
+        .garantia {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Benefícios */
+        .beneficios {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            border-top: 2px solid #333;
+        }
+        
+        .beneficios h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .beneficio-card {
+            background: #1a1a1a;
+            border: 2px solid #fff;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .beneficio-card:hover {
+            background: #0a0a0a;
+            transform: translateY(-5px);
+        }
+        
+        .beneficio-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .beneficio-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .beneficio-card p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+        
+        /* Combinação */
+        .combinacao {
+            background: #0a0a0a;
+            border-top: 2px solid #fff;
+            padding: 80px 20px;
+        }
+        
+        .combinacao-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .combinacao h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .combinacao-intro {
+            text-align: center;
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 50px;
+        }
+        
+        .produtos-combo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .combo-card {
+            background: #1a1a1a;
+            border: 2px solid #666;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .combo-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .combo-card p {
+            color: #aaa;
+            font-size: 15px;
+        }
+        
+        /* CTA Final */
+        .cta-final {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 3px solid #fff;
+            text-align: center;
+        }
+        
+        .cta-final h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .cta-final p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 968px) {
+            .produto-hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .produto-imagem-container {
+                position: static;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .produto-conteudo {
+                background-position: center;
+                padding: 40px 30px;
+                min-height: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+            
+            .instagram-btn {
+                position: static;
+                transform: none;
+                margin: 15px auto 0;
+                width: fit-content;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .produto-hero {
+                padding: 40px 20px;
+            }
+            
+            .produto-conteudo {
+                padding: 30px 20px;
+            }
+            
+            .produto-conteudo h1 {
+                font-size: 32px;
+            }
+            
+            .preco-atual {
+                font-size: 42px;
+            }
+            
+            .preco-antigo {
+                font-size: 22px;
+                display: block;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .relato-texto {
+                font-size: 17px;
+            }
+            
+            .cta-principal {
+                padding: 20px 40px;
+                font-size: 18px;
+                display: block;
+                text-align: center;
+            }
+            
+            .beneficios h2,
+            .combinacao h2 {
+                font-size: 28px;
+            }
+            
+            .cta-final {
+                padding: 40px 20px;
+                margin: 60px 20px;
+            }
+            
+            .cta-final h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="index.html#produtos">Descubra</a>
+                <a href="index.html#descubra">Produtos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            
+            <a href="https://instagram.com/atletadopropriocorre" target="_blank" class="instagram-btn">
+                <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Siga Nossa Página
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Produto - LADO A LADO -->
+        <section class="produto-hero">
+            <!-- Imagem do Produto (Sticky) -->
+            <div class="produto-imagem-container">
+                <div class="produto-imagem">
+                    <img src="produto1.jpg" alt="Happy Hair + Colágeno">
+                </div>
+            </div>
+            
+            <!-- Conteúdo COM IMAGEM DE FUNDO -->
+            <div class="produto-conteudo">
+                <span class="produto-tag">🔥 TESTADO E APROVADO</span>
+                <h1>Happy Hair + Colágeno Com Ácido Hialurônico</h1>
+                
+                <!-- Preço SEM BOX -->
+                <div class="preco-info">
+                    <span class="preco-atual">R$ 97</span>
+                    <span class="preco-antigo">R$ 140</span>
+                    <span class="economia">✓ Economize R$ 43</span>
+                    <span class="frete">✓ Frete Grátis para Todo Brasil</span>
+                </div>
+                
+                <!-- Relato Pessoal -->
+                <div class="relato-texto">
+                    <p>E quem diria, vamos começar pelo <strong>Happy Hair</strong>, né? Enfim, o Happy Hair foi uma <strong>solução importante</strong> para meu tratamento de cabelo que eu tava tendo uma queda sem motivos aparentes.</p>
+
+                    <p>Apesar de eu ter 20 anos, já tenho genética para ter entradas, então, enfim... Eu fiz uma <strong>combinação espontânea</strong> desse suplemento junto ao <strong>óleo essencial de lavanda e alecrim da WNF</strong>.</p>
+
+                    <div class="destaque-relato">
+                        <p>"Foi uma solução que eu vi grandes resultados em pouquíssimo tempo. Se você assim como eu é uma pessoa que quer adquirir resultado rápido e eficiente, essa é a combinação."</p>
+                    </div>
+
+                    <p>E assim, o que eu tô passando aqui é algo que <strong>eu fiz, foi testado e funcionou para mim</strong> e eu acredito que possa funcionar para muitos também.</p>
+
+                    <p>O Happy Hair é uma <strong>combinação perfeita</strong>, mas assim, para uso solo também é muito indicado. Porque ele tem componentes que são bons tanto <strong>pro cabelo quanto pras unhas</strong> também.</p>
+
+                    <p>É para homens e mulheres que procuram fortalecer seus alongamentos, suas unhas mesmo, né? Enfim, <strong>indico muito</strong>.</p>
+                </div>
+                
+                <!-- CTA Integrado -->
+                <div class="cta-integrado">
+                    <p class="cta-texto">Quer experimentar a mesma solução que funcionou para mim? Clique abaixo e conheça o Happy Hair:</p>
+                    <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" class="cta-principal">
+                        CONHECER O PRODUTO
+                    </a>
+                    <p class="garantia">🔒 Compra 100% Segura | Entrega Garantida</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="beneficios">
+            <h2>POR QUE HAPPY HAIR FUNCIONA</h2>
+            
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💪</div>
+                    <h3>Fortalecimento Capilar</h3>
+                    <p>Reduz a queda de cabelo e fortalece os fios desde a raiz com colágeno de alta qualidade.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">✨</div>
+                    <h3>Crescimento Acelerado</h3>
+                    <p>Estimula o crescimento saudável dos fios com nutrientes essenciais para o couro cabeludo.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💅</div>
+                    <h3>Unhas Fortes</h3>
+                    <p>Fortalece as unhas, evitando quebra e descamação. Unhas mais saudáveis e bonitas.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">⚡</div>
+                    <h3>Resultados Rápidos</h3>
+                    <p>Resultados visíveis em pouquíssimo tempo. Você vai notar a diferença nas primeiras semanas.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🧬</div>
+                    <h3>Ácido Hialurônico</h3>
+                    <p>Hidratação profunda para cabelos e pele, mantendo a elasticidade e vitalidade.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🌟</div>
+                    <h3>Para Todos</h3>
+                    <p>Indicado para homens e mulheres que buscam cabelos e unhas mais fortes e saudáveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combinação -->
+        <section class="combinacao">
+            <div class="combinacao-content">
+                <h2>COMBINAÇÃO PODEROSA</h2>
+                <p class="combinacao-intro">Para potencializar ainda mais os resultados, recomendo combinar o Happy Hair com:</p>
+                
+                <div class="produtos-combo">
+                    <div class="combo-card">
+                        <h4>🌿 Óleo de Lavanda WNF</h4>
+                        <p>Estimula a circulação no couro cabeludo e promove crescimento saudável.</p>
+                    </div>
+                    
+                    <div class="combo-card">
+                        <h4>🌿 Óleo de Alecrim WNF</h4>
+                        <p>Fortalece as raízes e previne a queda. Combinação perfeita com lavanda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <div class="cta-final">
+            <h2>PRONTO PARA TRANSFORMAR SEU CABELO?</h2>
+            <p>Não espere mais. Comece sua jornada para ter cabelos e unhas mais fortes hoje mesmo.</p>
+            <a href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" class="cta-principal">
+                CONHECER O PRODUTO AGORA
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

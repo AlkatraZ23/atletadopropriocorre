@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Atleta do Próprio Corre | Produtos Testados e Aprovados</title>
+    <meta name="description" content="Descubra produtos de qualidade testados e aprovados. Suplementos, óleos essenciais e cuidados pessoais para seu estilo de vida.">
+    <meta name="keywords" content="suplementos, óleos essenciais, happy hair, lavanda, alecrim, produtos naturais">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Atleta do Próprio Corre">
+    <meta property="og:description" content="Produtos testados e aprovados para seu estilo de vida saudável.">
+    <meta property="og:image" content="https://seusite.vercel.app/og-image.jpg">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Fixo */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 9999;
+            padding: 15px 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+        }
+        
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #fff;
+        }
+        
+        /* Hero Section - DESCUBRA (HOME) */
+        #descubra {
+            margin-top: 100px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            padding: 80px 20px;
+        }
+        
+        #descubra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        .hero-content h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 3px solid #fff;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            margin: 0 10px;
+        }
+        
+        .hero-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        /* Seção Blog */
+        #blog {
+            padding: 80px 20px;
+            background: #0a0a0a;
+            border-top: 3px solid #fff;
+        }
+        
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #fff;
+            padding-bottom: 20px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .blog-card {
+            background: #000;
+            border: 3px solid #fff;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .blog-card-content {
+            padding: 25px;
+        }
+        
+        .blog-categoria {
+            background: #0f0;
+            color: #000;
+            padding: 6px 15px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .blog-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .blog-card p {
+            color: #aaa;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+        
+        .blog-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .blog-btn::after {
+            content: '→';
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        
+        /* Seção Produtos */
+        #produtos {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .produto-card {
+            background: #0a0a0a;
+            border: 3px solid #fff;
+            overflow: hidden;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .produto-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+        
+        .produto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #fff;
+        }
+        
+        .produto-card-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .produto-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .produto-frase {
+            color: #0f0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .produto-card p {
+            color: #aaa;
+            margin-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.6;
+            flex: 1;
+        }
+        
+        .produto-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .produto-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .produto-btn::after {
+            content: '→';
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        
+        /* Instagram CTA */
+        .instagram-cta {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-top: 3px solid #fff;
+        }
+        
+        .instagram-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .instagram-cta p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .instagram-btn-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            padding: 18px 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(188, 24, 136, 0.4);
+        }
+        
+        .instagram-btn-cta:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+        }
+        
+        footer p {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Responsivo Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 0;
+            }
+            
+            .logo {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            
+            #descubra {
+                margin-top: 90px;
+                min-height: 70vh;
+                padding: 50px 15px;
+                background-attachment: scroll;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .hero-btn {
+                display: block;
+                margin: 10px 0;
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+            
+            #produtos,
+            #blog {
+                padding: 50px 15px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            
+            .produtos-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .instagram-cta {
+                padding: 50px 15px;
+            }
+            
+            .instagram-cta h2 {
+                font-size: 26px;
+            }
+            
+            .instagram-btn-cta {
+                display: block;
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Safari iOS */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            #descubra {
+                margin-top: 95px;
+            }
+        }
+        
+        /* Tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #descubra {
+                margin-top: 95px;
+            }
+            
+            .hero-content h1 {
+                font-size: 42px;
+            }
+            
+            .produtos-grid,
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="#descubra" class="active">Descubra</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - DESCUBRA (HOME) -->
+    <section id="descubra">
+        <div class="hero-content">
+            <h1>SPORTLIFE</h1>
+            <p>POIS SOMOS ATLETAS DO PRÓPRIO CORRE</p>
+            <a href="produtos.html" class="hero-btn">Ver Produtos</a>
+            <a href="blog.html" class="hero-btn">Ler Blog</a>
+        </div>
+    </section>
+
+    <!-- Seção Blog - PRIMEIRO -->
+    <section id="blog">
+        <div class="blog-container">
+            <h2 class="section-title">ÚLTIMAS DO BLOG</h2>
+            
+            <div class="blog-grid">
+                <!-- Artigo 1 -->
+                <div class="blog-card">
+                    <img src="blog1.jpg" alt="Tratamento Capilar">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria" style="background: #0ff;">SAÚDE E BEM-ESTAR</span>
+                        <h3>Como Tratar Queda Capilar com 3 Produtos</h3>
+                        <p>Método completo com dosagens exatas para crescimento capilar. Testado e aprovado aos 20 anos.</p>
+                        <a href="artigo-tratamento-capilar.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Artigo 2 -->
+                <div class="blog-card">
+                    <img src="barra-ovomaltine.jpg" alt="Barra Ovomaltine">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria">ESPORTE</span>
+                        <h3>Barra de Proteína Ovomaltine: O Chocolate dos Atletas</h3>
+                        <p>Review completo da barra mais saborosa do mercado. 20g de proteína com sabor autêntico.</p>
+                        <a href="artigo-barra-ovomaltine.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Artigo 3 -->
+                <div class="blog-card">
+                    <img src="insane-clown.jpg" alt="Insane Clown">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria" style="background: #f00;">EXTREMO</span>
+                        <h3>Insane Clown: Potência Que Assusta e Riscos Reais</h3>
+                        <p>A verdade sobre o pré-treino mais potente e polêmico do mercado. Eficiência brutal e riscos.</p>
+                        <a href="artigo-insane-clown.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Artigo 4 -->
+                <div class="blog-card">
+                    <img src="sabao-albany.jpg" alt="Sabão Albany">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria" style="background: #0ff;">SAÚDE E BEM-ESTAR</span>
+                        <h3>Sabão Albany: Solução Para Foliculite e Alergia de Gilete</h3>
+                        <p>Como acabar com alergias de gilete, foliculite e ressecamento de pele. Kit com 4 sabonetes testado.</p>
+                        <a href="artigo-sabao-albany.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Artigo 5 -->
+                <div class="blog-card">
+                    <img src="blue-calm.jpg" alt="Blue Calm Melatonina">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria" style="background: #0ff;">SAÚDE E BEM-ESTAR</span>
+                        <h3>Blue Calm: Melatonina em Gotas Para Insônia e Atletas</h3>
+                        <p>Mais eficiente que gomas tradicionais. Para insônia, problemas de ATM e recuperação pós-treino.</p>
+                        <a href="artigo-blue-calm.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Artigo 6 -->
+                <div class="blog-card">
+                    <img src="produto-alecrim.jpg" alt="Óleo Alecrim">
+                    <div class="blog-card-content">
+                        <span class="blog-categoria" style="background: #0ff;">SAÚDE E BEM-ESTAR</span>
+                        <h3>Óleo de Alecrim WNF: Foco Mental e Crescimento Capilar</h3>
+                        <p>Promove crescimento capilar e melhora concentração mental. Ideal para quem precisa de foco no trabalho.</p>
+                        <a href="produto-oleo-alecrim.html" class="blog-btn">Ler Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos - SEGUNDO -->
+    <section id="produtos">
+        <h2 class="section-title">PRODUTOS RECOMENDADOS</h2>
+        
+        <div class="produtos-grid">
+            <!-- Produto 1 -->
+            <div class="produto-card">
+                <img src="produto1.jpg" alt="Happy Hair + Colágeno">
+                <div class="produto-card-content">
+                    <h3>Happy Hair + Colágeno</h3>
+                    <p class="produto-frase">✓ Queda capilar? Solução comprovada</p>
+                    <p>Fortalece cabelos e unhas de dentro para fora. Resultados visíveis em semanas. Para atletas e trabalhadores estressados.</p>
+                    <a href="produtos.html" class="produto-btn">Conhecer Produto</a>
+                </div>
+            </div>
+            
+            <!-- Produto 2 -->
+            <div class="produto-card">
+                <img src="produto-alecrim.jpg" alt="Óleo de Alecrim">
+                <div class="produto-card-content">
+                    <h3>Óleo de Alecrim WNF</h3>
+                    <p class="produto-frase">✓ Foco mental + crescimento capilar</p>
+                    <p>Promove crescimento E melhora concentração. Ideal para quem precisa de foco no trabalho e cabelo saudável.</p>
+                    <a href="produtos.html" class="produto-btn">Conhecer Produto</a>
+                </div>
+            </div>
+            
+            <!-- Produto 3 -->
+            <div class="produto-card">
+                <img src="produto-lavanda.jpg" alt="Óleo de Lavanda">
+                <div class="produto-card-content">
+                    <h3>Óleo de Lavanda WNF</h3>
+                    <p class="produto-frase">✓ Campeão de vendas - Sono e relaxamento</p>
+                    <p>Para sono de qualidade e relaxamento muscular. Trabalhou o dia todo e treinou pesado? Esse óleo salva.</p>
+                    <a href="produtos.html" class="produto-btn">Conhecer Produto</a>
+                </div>
+            </div>
+            
+            <!-- Produto 4 -->
+            <div class="produto-card">
+                <img src="sabao-albany.jpg" alt="Sabão Albany">
+                <div class="produto-card-content">
+                    <h3>Kit 4 Sabonetes Albany</h3>
+                    <p class="produto-frase">✓ Acabou a tortura de barbear</p>
+                    <p>Antibacteriano que realmente funciona contra foliculite e pelos encravados. Para quem se barbeia todo dia.</p>
+                    <a href="produtos.html" class="produto-btn">Conhecer Produto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="instagram-cta">
+        <h2>Siga Nossa Jornada no Instagram</h2>
+        <p>Acompanhe dicas diárias, resultados reais e muito mais!</p>
+        <a href="https://instagram.com/atletadopropriocorre" target="_blank" class="instagram-btn-cta">
+            SEGUIR NO INSTAGRAM
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

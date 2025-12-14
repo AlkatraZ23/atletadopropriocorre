@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>SPORTLIFE: Mais Que Moda, Um Estilo de Vida Sustentável | Atleta do Próprio Corre</title>
+    <meta name="description" content="Descubra o verdadeiro conceito SPORTLIFE: sustentabilidade, saúde, bem-estar e muito além da moda. Um movimento que transforma vidas e protege o meio ambiente.">
+    <meta name="keywords" content="sportlife, estilo de vida, moda sustentável, streetwear, athleisure, ecodesign, saúde, bem-estar, cultura urbana">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SPORTLIFE: O Estilo de Vida Que Está Transformando a Moda">
+    <meta property="og:description" content="Entenda o conceito completo de SPORTLIFE: sustentabilidade, saúde e uma revolução na indústria da moda.">
+    <meta property="og:image" content="https://seusite.vercel.app/sportlife-concept.jpg">
+    <meta property="og:type" content="article">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SPORTLIFE: O Novo Conceito Que Vai Além da Moda",
+      "description": "Manifesto completo sobre o conceito SPORTLIFE como estilo de vida sustentável e saudável",
+      "author": {
+        "@type": "Person",
+        "name": "Atleta do Próprio Corre"
+      },
+      "datePublished": "2025-12-14",
+      "image": "https://seusite.vercel.app/sportlife-concept.jpg",
+      "articleSection": "Sportlife"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 9999;
+            padding: 15px 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid #fff;
+        }
+        
+        /* Main */
+        main {
+            margin-top: 120px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px 20px 60px;
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .breadcrumbs a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .breadcrumbs a:hover {
+            color: #fff;
+        }
+        
+        .breadcrumbs span {
+            color: #666;
+            margin: 0 10px;
+        }
+        
+        /* Artigo Header */
+        .artigo-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .artigo-tag {
+            background: #fff;
+            color: #000;
+            padding: 8px 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .artigo-header h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        
+        .artigo-meta {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Imagem Destaque */
+        .imagem-destaque {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            display: block;
+            border: 3px solid #fff;
+            padding: 20px;
+            background: #fff;
+        }
+        
+        /* Conteúdo */
+        .artigo-conteudo {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+        
+        .artigo-conteudo p {
+            margin-bottom: 20px;
+        }
+        
+        .artigo-conteudo strong {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .artigo-conteudo h2 {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #fff;
+            border-left: 4px solid #fff;
+            padding-left: 15px;
+        }
+        
+        .artigo-conteudo h3 {
+            font-size: 22px;
+            margin: 30px 0 15px;
+            color: #fff;
+        }
+        
+        .artigo-conteudo ul,
+        .artigo-conteudo ol {
+            margin: 20px 0 20px 25px;
+        }
+        
+        .artigo-conteudo ul li,
+        .artigo-conteudo ol li {
+            margin-bottom: 12px;
+        }
+        
+        /* Destaque Box */
+        .destaque-box {
+            background: #1a1a1a;
+            border-left: 4px solid #fff;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .destaque-box p {
+            margin: 0;
+            font-style: italic;
+            color: #f0f0f0;
+        }
+        
+        /* Manifesto Box */
+        .manifesto-box {
+            background: #0a0a0a;
+            border: 3px solid #fff;
+            padding: 30px 25px;
+            margin: 30px 0;
+        }
+        
+        .manifesto-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0f0;
+            text-align: center;
+        }
+        
+        .manifesto-box ul {
+            margin-left: 20px;
+        }
+        
+        .manifesto-box li {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 3px solid #fff;
+            padding: 35px 25px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .cta-box p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+            color: #000;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 3px solid #fff;
+            transition: 0.3s;
+            margin: 5px;
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #e0e0e0 0%, #fff 100%);
+        }
+        
+        .btn-cta::after {
+            content: '→';
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        /* Emoji Highlight */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        
+        /* AdSense */
+        .ad-container {
+            background: #111;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #333;
+            margin: 50px 0;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+            margin-top: 60px;
+        }
+        
+        /* Responsivo Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 0;
+            }
+            
+            .logo {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            
+            main {
+                margin-top: 100px;
+                padding: 30px 15px 50px;
+            }
+            
+            .breadcrumbs {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            
+            .artigo-header h1 {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+            
+            .artigo-tag {
+                font-size: 11px;
+                padding: 6px 15px;
+            }
+            
+            .artigo-conteudo {
+                font-size: 16px;
+            }
+            
+            .artigo-conteudo h2 {
+                font-size: 24px;
+                margin: 30px 0 15px;
+                padding-left: 12px;
+            }
+            
+            .artigo-conteudo h3 {
+                font-size: 20px;
+                margin: 25px 0 12px;
+            }
+            
+            .imagem-destaque {
+                padding: 15px;
+            }
+            
+            .manifesto-box {
+                padding: 20px 15px;
+            }
+            
+            .manifesto-box h3 {
+                font-size: 20px;
+            }
+            
+            .manifesto-box li {
+                font-size: 15px;
+            }
+            
+            .cta-box {
+                padding: 25px 15px;
+            }
+            
+            .cta-box h3 {
+                font-size: 22px;
+            }
+            
+            .btn-cta {
+                display: block;
+                width: 100%;
+                padding: 16px 20px;
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            
+            .destaque-box {
+                padding: 15px;
+            }
+            
+            .ad-container {
+                padding: 20px 10px;
+            }
+        }
+        
+        /* Safari iOS específico */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            main {
+                margin-top: 110px;
+            }
+            
+            .btn-cta {
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+        }
+        
+        /* Tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            main {
+                margin-top: 110px;
+                padding: 35px 30px;
+            }
+            
+            .artigo-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="index.html#produtos">Descubra</a>
+                <a href="index.html#descubra">Produtos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="blog.html">Blog</a>
+            <span>›</span>
+            <a href="blog.html#sportlife">Sportlife</a>
+            <span>›</span>
+            <span style="color: #fff;">O Novo Conceito SPORTLIFE</span>
+        </nav>
+
+        <!-- Header do Artigo -->
+        <div class="artigo-header">
+            <span class="artigo-tag">🏃 SPORTLIFE</span>
+            <h1>SPORTLIFE: Mais Que Moda, Um Estilo de Vida Sustentável</h1>
+            <p class="artigo-meta">Por Atleta do Próprio Corre | 14 de Dezembro de 2025</p>
+        </div>
+
+        <!-- Imagem Destaque -->
+        <img src="sportlife-concept.jpg" alt="Conceito SPORTLIFE - Estilo de Vida" class="imagem-destaque">
+
+        <!-- Conteúdo do Artigo -->
+        <article class="artigo-conteudo">
+            <p>Esqueça tudo o que você achava que sabia sobre <strong>SPORTLIFE</strong>. Não é só sobre usar tênis caros ou correr atrás dos últimos lançamentos. É muito mais profundo que isso.</p>
+
+            <p>O conceito <strong>SPORTLIFE</strong> representa uma verdadeira revolução na forma como enxergamos moda, saúde, sustentabilidade e estilo de vida. É sobre ser um <strong>atleta do próprio corre</strong> — na vida e nas escolhas que fazemos.</p>
+
+            <div class="destaque-box">
+                <p><span class="emoji">💭</span> <strong>Nossa raiz:</strong> Quando estamos na luta do dia a dia atrás da conquista dos nossos objetivos, por paixão e desejo, somos representados como atletas. Sempre correndo atrás. 🏃</p>
+            </div>
+
+            <h2>A Influência do Próprio Público</h2>
+
+            <p>A maioria das pessoas que adotam o estilo <strong>SPORTLIFE</strong> têm algo em comum: estão conectadas com alguma prática ou hobby esportivo. Pode ser:</p>
+
+            <ul>
+                <li>Assistir os jogos da Champions League</li>
+                <li>Praticar corrida matinal</li>
+                <li>Treinar na academia regularmente</li>
+                <li>Jogar futebol com os manos no fim de semana</li>
+                <li>Pedalar pela cidade</li>
+            </ul>
+
+            <p>Essa conexão natural entre moda e movimento cria uma identidade autêntica e verdadeira.</p>
+
+            <h2>Estiloso + Saúde</h2>
+
+            <p>Agora pense comigo: <strong>quantos estilos da moda você conhece que promovem um estilo de vida saudável e a prática de exercícios e esportes?</strong></p>
+
+            <p>Pois é. O <strong>SPORTLIFE</strong> pode ser visto exatamente por esse lado. Não é só roupa — é uma proposta completa de bem-estar.</p>
+
+            <div class="ad-container">
+                [ ANÚNCIO GOOGLE ADSENSE - 728x90 ]
+            </div>
+
+            <h2>O Novo Conceito "SPORTLIFE"</h2>
+
+            <p>Daqui pra frente, não considere somente o termo <strong>"SPORTLIFE é você estar no corre do dia a dia pra se obter uns panos"</strong>. Por mais válido que seja, essa ideia é apenas <strong>uma parte de um todo</strong> ligado a cada um de nós.</p>
+
+            <h3>Como Assim?</h3>
+
+            <p>O uso desse estilo mais <strong>leve, confortável e descontraído</strong> passa uma imagem de bem-estar e saúde. E até mesmo a <strong>aceitação do seu próprio físico</strong>, já que é um estilo feito de tecidos leves e finos na maioria, acabando por valorizar o corpo.</p>
+
+            <div class="manifesto-box">
+                <h3>✅ OS PILARES DO SPORTLIFE</h3>
+                <ul>
+                    <li><strong>Conforto:</strong> Tecidos leves que se movem com você</li>
+                    <li><strong>Funcionalidade:</strong> Roupas práticas para o dia a dia ativo</li>
+                    <li><strong>Bem-Estar:</strong> Valorização da saúde física e mental</li>
+                    <li><strong>Autenticidade:</strong> Aceitação e valorização do próprio corpo</li>
+                    <li><strong>Sustentabilidade:</strong> Materiais eco-friendly e conscientes</li>
+                    <li><strong>Comunidade:</strong> Conexão com quem compartilha os mesmos valores</li>
+                </ul>
+            </div>
+
+            <h2><span class="emoji">🌱</span> POTENCIAL DE TRANSFORMAR A MODA</h2>
+
+            <p>Imagine o quanto impactaria a indústria num mundo onde a tendência na moda fosse predominada por este tipo de <strong>vestimenta sustentável (EcoDesign 🌱)</strong>, como protesto à preservação do meio ambiente.</p>
+
+            <p>Concerteza <strong>forçaríamos grandes marcas</strong> que impactam negativamente no meio ambiente com suas produções a optar pelo uso do mesmo tipo de material — só pra ter sua presença no mercado.</p>
+
+            <div class="destaque-box">
+                <p><span class="emoji">💡</span> <strong>Uma ideia de olho no futuro:</strong> O SPORTLIFE tem o poder de revolucionar a indústria da moda através da demanda por sustentabilidade.</p>
+            </div>
+
+            <h2><span class="emoji">⚠️</span> Influencers na Cena (MINHA PROPOSTA)</h2>
+
+            <p>Se todos os manos que se dizem <strong>SPORTLIFE</strong> e que de fato influenciam na cena vestissem seus artigos nesse intuito, <strong>incentivando seus seguidores a buscar por um estilo de vida saudável</strong>...</p>
+
+            <p>Impactaríamos MUITO na indústria e nos conteúdos que são produzidos. Seria uma verdadeira revolução cultural.</p>
+
+            <div class="ad-container">
+                [ ANÚNCIO GOOGLE ADSENSE - 728x90 ]
+            </div>
+
+            <h2>SUSTENTABILIDADE: Já Não Impactamos?</h2>
+
+            <p>A maioria dos artigos usados e cobiçados na cena SPORTLIFE tem suas confecções à base de <strong>materiais sustentáveis e menos nocivos ao meio ambiente</strong>, desde a produção até o descarte ou reutilização.</p>
+
+            <p>Marcas como Nike, Adidas, Puma e outras já investem pesado em:</p>
+
+            <ul>
+                <li>Poliéster reciclado de garrafas PET</li>
+                <li>Algodão orgânico certificado</li>
+                <li>Tintas à base de água</li>
+                <li>Processos de produção com menor consumo de água</li>
+                <li>Programas de reciclagem de tênis usados</li>
+            </ul>
+
+            <p>Ao escolher SPORTLIFE, você <strong>já está fazendo sua parte</strong> pela preservação do planeta.</p>
+
+            <h2>SPORTLIFE É UM ESTILO DE VIDA</h2>
+
+            <p>Pode parecer confuso, mas isso não poderia estar mais claro: quando você porta esse estilo esportivo e atlético, de forma <strong>indireta e inconsciente</strong>, você estará promovendo uma mensagem através do que veste.</p>
+
+            <p>Você comunica ao mundo que valoriza:</p>
+
+            <ul>
+                <li><strong>Saúde</strong> — física e mental</li>
+                <li><strong>Movimento</strong> — estar sempre ativo</li>
+                <li><strong>Sustentabilidade</strong> — cuidar do planeta</li>
+                <li><strong>Autenticidade</strong> — ser quem você realmente é</li>
+                <li><strong>Comunidade</strong> — fazer parte de algo maior</li>
+            </ul>
+
+            <div class="manifesto-box">
+                <h3>🔥 MANIFESTO SPORTLIFE</h3>
+                <ul>
+                    <li>Somos atletas do nosso próprio corre</li>
+                    <li>Valorizamos conforto sem abrir mão do estilo</li>
+                    <li>Acreditamos que moda pode ser sustentável</li>
+                    <li>Promovemos saúde e bem-estar através das escolhas</li>
+                    <li>Respeitamos nosso corpo e o planeta</li>
+                    <li>Inspiramos outros a viver com propósito</li>
+                </ul>
+            </div>
+
+            <h2>Faça Parte Dessa Revolução</h2>
+
+            <p>O movimento <strong>SPORTLIFE</strong> não é só sobre o que você veste. É sobre <strong>como você vive</strong>. É sobre fazer escolhas conscientes que impactam positivamente sua vida, a comunidade e o meio ambiente.</p>
+
+            <p>Seja você praticando esportes, assistindo aos jogos, ou simplesmente vivendo seu dia a dia com conforto e estilo — <strong>você é um atleta</strong>. Do seu próprio corre.</p>
+
+            <div class="cta-box">
+                <h3>Pronto Para Viver o SPORTLIFE?</h3>
+                <p>Descubra artigos sustentáveis que combinam estilo, conforto e propósito:</p>
+                <a href="index.html#produtos" class="btn-cta">Ver Produtos</a>
+                <a href="blog.html" class="btn-cta">Mais Artigos</a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+        <p style="margin-top: 10px; font-size: 14px; color: #888;">SPORTLIFE é mais que moda. É um estilo de vida. 🏃</p>
+    </footer>
+
+</body>
+</html>

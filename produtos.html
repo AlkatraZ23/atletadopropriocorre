@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Produtos Testados Para Atletas e Trabalhadores | Atleta do Próprio Corre</title>
+    <meta name="description" content="Produtos que resolvem problemas reais: dores, recuperação, performance, estresse e fadiga. Para quem treina pesado e trabalha duro.">
+    <meta name="keywords" content="produtos fitness, recuperação muscular, dores, fadiga, suplementos, atletas, trabalhadores">
+    <meta name="author" content="Atleta do Próprio Corre">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Fixo - IGUAL AO BLOG */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #000;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #fff;
+            z-index: 9999;
+            padding: 15px 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+        }
+        
+        .header-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #fff;
+        }
+        
+        /* Hero Produtos */
+        .produtos-hero {
+            margin-top: 100px;
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 3px solid #fff;
+        }
+        
+        .produtos-hero .subtitle {
+            font-size: 24px;
+            color: #0f0;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .produtos-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        
+        .produtos-hero p {
+            font-size: 20px;
+            color: #aaa;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Container Produtos */
+        .produtos-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        /* Grid */
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        /* Card Produto */
+        .produto-card {
+            background: #0a0a0a;
+            border: 3px solid #fff;
+            overflow: hidden;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .produto-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+        
+        .produto-imagem-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #fff;
+        }
+        
+        .produto-imagem {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: 3px solid #fff;
+            transition: 0.3s;
+        }
+        
+        .produto-card:hover .produto-imagem {
+            transform: scale(1.05);
+        }
+        
+        .produto-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #fff;
+        }
+        
+        .produto-badge.destaque {
+            background: #0f0;
+            color: #000;
+            border-color: #0f0;
+        }
+        
+        .produto-badge.extremo {
+            background: #f00;
+            border-color: #f00;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .produto-info {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .produto-categoria {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #888;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .produto-info h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .produto-problema {
+            font-size: 14px;
+            color: #f00;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .produto-resumo {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #aaa;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        
+        .produto-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .tag {
+            background: #1a1a1a;
+            border: 1px solid #0f0;
+            color: #0f0;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .produto-btn {
+            display: inline-block;
+            width: 100%;
+            background: #fff;
+            color: #000;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            text-align: center;
+        }
+        
+        .produto-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .produto-btn::after {
+            content: '→';
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 2px solid #fff;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Responsivo Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 0;
+            }
+            
+            .logo {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            
+            .produtos-hero {
+                margin-top: 90px;
+                padding: 50px 15px 40px;
+            }
+            
+            .produtos-hero .subtitle {
+                font-size: 18px;
+            }
+            
+            .produtos-hero h1 {
+                font-size: 36px;
+            }
+            
+            .produtos-hero p {
+                font-size: 16px;
+            }
+            
+            .produtos-container {
+                padding: 50px 15px;
+            }
+            
+            .produtos-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .produto-imagem-wrapper {
+                height: 250px;
+            }
+            
+            .produto-info {
+                padding: 25px;
+            }
+            
+            .produto-info h2 {
+                font-size: 22px;
+            }
+        }
+        
+        /* Safari iOS */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            .produtos-hero {
+                margin-top: 95px;
+            }
+        }
+        
+        /* Tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .produtos-hero {
+                margin-top: 95px;
+            }
+            
+            .produtos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header - IGUAL AO BLOG -->
+    <header>
+        <div class="header-content">
+            <div class="logo">ATLETA DO PRÓPRIO CORRE</div>
+            <nav>
+                <a href="index.html#descubra">Descubra</a>
+                <a href="produtos.html" class="active">Produtos</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Produtos -->
+    <section class="produtos-hero">
+        <p class="subtitle">Para Quem Treina Pesado e Trabalha Duro</p>
+        <h1>PRODUTOS QUE RESOLVEM<br>PROBLEMAS REAIS</h1>
+        <p>Recuperação, performance, dores, fadiga e estresse. Testados na prática, aprovados no dia a dia.</p>
+    </section>
+
+    <!-- Container Produtos -->
+    <main class="produtos-container">
+        <div class="produtos-grid">
+            
+            <!-- Produto 1: Happy Hair -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="produto1.jpg" alt="Happy Hair + Colágeno" class="produto-imagem">
+                    <span class="produto-badge destaque">DESTAQUE</span>
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Suplemento Capilar</p>
+                    <h2>Happy Hair + Colágeno</h2>
+                    <p class="produto-problema">❌ Queda capilar aos 20 anos?</p>
+                    <p class="produto-resumo">Fortalece cabelos e unhas de dentro para fora. Se você sofre com queda precoce, unhas fracas ou cabelo sem vida, este é o produto. Resultados REAIS em semanas. Para atletas e trabalhadores estressados.</p>
+                    <div class="produto-tags">
+                        <span class="tag">Crescimento</span>
+                        <span class="tag">Unhas Fortes</span>
+                        <span class="tag">Anti-Queda</span>
+                    </div>
+                    <a href="produto-happy-hair.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 2: Óleo de Alecrim -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="produto-alecrim.jpg" alt="Óleo de Alecrim WNF" class="produto-imagem">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Óleo Essencial</p>
+                    <h2>Óleo de Alecrim WNF</h2>
+                    <p class="produto-problema">❌ Falta de foco no trabalho?</p>
+                    <p class="produto-resumo">Promove crescimento capilar E melhora concentração mental. Ideal para quem precisa de foco no trabalho e quer cabelo saudável. Efeito duplo: estético e cognitivo. Orgânico e natural.</p>
+                    <div class="produto-tags">
+                        <span class="tag">Foco Mental</span>
+                        <span class="tag">Crescimento</span>
+                        <span class="tag">Natural</span>
+                    </div>
+                    <a href="produto-oleo-alecrim.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 3: Óleo de Lavanda -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="produto-lavanda.jpg" alt="Óleo de Lavanda WNF" class="produto-imagem">
+                    <span class="produto-badge destaque">MAIS VENDIDO</span>
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Óleo Essencial</p>
+                    <h2>Óleo de Lavanda WNF</h2>
+                    <p class="produto-problema">❌ Insônia e tensão muscular?</p>
+                    <p class="produto-resumo">O campeão absoluto. Para sono de qualidade, relaxamento muscular e crescimento capilar. Trabalhou o dia todo e treinou pesado? Esse óleo salva. Combate bruxismo (ATM) e tensão. Versátil demais.</p>
+                    <div class="produto-tags">
+                        <span class="tag">Sono Profundo</span>
+                        <span class="tag">Relaxamento</span>
+                        <span class="tag">ATM/Bruxismo</span>
+                    </div>
+                    <a href="produto-oleo-lavanda.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 4: Sabão Albany -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="sabao-albany.jpg" alt="Sabão Albany" class="produto-imagem">
+                    <span class="produto-badge">R$ 10</span>
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Cuidados Pessoais</p>
+                    <h2>Kit 4 Sabonetes Albany</h2>
+                    <p class="produto-problema">❌ Foliculite e alergia de gilete?</p>
+                    <p class="produto-resumo">Acabou a tortura de barbear. Antibacteriano que realmente funciona contra foliculite, pelos encravados e irritação. Para quem se barbeia todo dia para o trabalho. Não resseca, não irrita. Preço ridículo de tão barato.</p>
+                    <div class="produto-tags">
+                        <span class="tag">Anti-Foliculite</span>
+                        <span class="tag">Barbear</span>
+                        <span class="tag">Kit 4un</span>
+                    </div>
+                    <a href="artigo-sabao-albany.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 5: Blue Calm -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="blue-calm.jpg" alt="Blue Calm Melatonina" class="produto-imagem">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Recuperação e Sono</p>
+                    <h2>Blue Calm Melatonina</h2>
+                    <p class="produto-problema">❌ Recuperação lenta e insônia?</p>
+                    <p class="produto-resumo">Para atletas que não se recuperam e trabalhadores que não dormem. Melatonina em gotas (mais eficiente que gomas). Acelera recuperação muscular, melhora sono e alivia ATM. Acorda disposto, treina melhor.</p>
+                    <div class="produto-tags">
+                        <span class="tag">Recuperação</span>
+                        <span class="tag">Sono Rápido</span>
+                        <span class="tag">Atletas</span>
+                    </div>
+                    <a href="artigo-blue-calm.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 6: Barra Ovomaltine -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="barra-ovomaltine.jpg" alt="Barra Ovomaltine" class="produto-imagem">
+                    <span class="produto-badge">SABOR REAL</span>
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Nutrição Esportiva</p>
+                    <h2>Barra Ovomaltine 20g Proteína</h2>
+                    <p class="produto-problema">❌ Sem tempo para refeição?</p>
+                    <p class="produto-resumo">O lanche perfeito entre treino e trabalho. 20g de proteína com sabor REAL de Ovomaltine. Mata fome, alimenta músculo, satisfaz paladar. Para quem não tem tempo de cozinhar mas precisa de nutrição séria.</p>
+                    <div class="produto-tags">
+                        <span class="tag">20g Proteína</span>
+                        <span class="tag">Praticidade</span>
+                        <span class="tag">Saborosa</span>
+                    </div>
+                    <a href="artigo-barra-ovomaltine.html" class="produto-btn">Conhecer Solução</a>
+                </div>
+            </article>
+
+            <!-- Produto 7: Insane Clown -->
+            <article class="produto-card">
+                <div class="produto-imagem-wrapper">
+                    <img src="insane-clown.jpg" alt="Insane Clown" class="produto-imagem">
+                    <span class="produto-badge extremo">⚠️ EXTREMO</span>
+                </div>
+                <div class="produto-info">
+                    <p class="produto-categoria">Pré-Treino Avançado</p>
+                    <h2>Insane Clown Demon Labs</h2>
+                    <p class="produto-problema">❌ Fadiga extrema pós-trabalho?</p>
+                    <p class="produto-resumo">Para quem trabalhou 10h e ainda quer treinar pesado. Energia BRUTAL quando você não tem mais nada no tanque. ATENÇÃO: apenas para avançados. Tem riscos reais. Não é para iniciantes. Use com responsabilidade.</p>
+                    <div class="produto-tags">
+                        <span class="tag" style="border-color: #f00; color: #f00;">Extremo</span>
+                        <span class="tag">Energia</span>
+                        <span class="tag">Avançado</span>
+                    </div>
+                    <a href="artigo-insane-clown.html" class="produto-btn">Ver Riscos</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Atleta do Próprio Corre. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
